@@ -1,3 +1,4 @@
+import javax.annotation.processing.SupportedSourceVersion;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -180,9 +181,14 @@ public class Main {
         sc.close();
         List<Map.Entry<String, double[]>> list = findTopKgenes(ll);
 
+        int topKP= 4;
         for (Map.Entry<String, double[]> entry : list) {
             System.out.println(entry.getKey()+" "+entry.getValue()[0]+" "+entry.getValue()[1]);
+            int pattern = Integer.parseInt(entry.getKey().substring(1));
         }
+
+
+
 
 
 //        double avgGR = 0;
